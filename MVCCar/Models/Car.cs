@@ -15,6 +15,7 @@ namespace MVCCar.Models
         public int ProductionYear { get; set; }
 
         [Column(TypeName = "decimal(18, 2)")]
+        [Range(typeof(decimal), "0,00", "9999999999999999,99", ErrorMessage = "Cijena može biti do 18 i 2 decimalna mjesta.")]
         public decimal Price { get; set; }
 
     }
